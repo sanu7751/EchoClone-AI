@@ -160,7 +160,7 @@ header {
   bottom: 20px; /* Sticks to bottom */
   left: 50%;
   transform: translateX(-50%);
-  width: 40%; /* Adjust width */
+  width: 50%; /* Adjust width */
   border-radius: 10px;
   display: flex;
   justify-content: space-around;
@@ -229,3 +229,7 @@ header nav a:hover {
   }
 
 
+
+
+
+ 
