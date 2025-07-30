@@ -14,6 +14,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -50,8 +51,8 @@
     <header>
       <nav>
         <a href="#home">Home</a>
-        <a href="#upload">Upload Voice</a>
-        <a href="#about">About</a>
+        <a href="voice-assistant.html">Upload Voice</a>
+        <a href="about.html">About</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -242,6 +243,10 @@
   </div>
 </section>
 
+
+
+
+
 <script>
   VANTA.NET({
     el: "#vanta-bg",
@@ -249,7 +254,7 @@
     touchControls: true,
     gyroControls: false,
     minHeight: 1000.00,
-    minWidth: 2000,
+    minWidth: 1500,
     scale: 1.0,
     scaleMobile: 1.0,
     color: 0x7a7eff,
@@ -261,20 +266,88 @@
 </script>
 
 
+<section class="bg-gradient-to-br from-indigo-50 via-white to-purple-100 py-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center text-gray-800 mb-14">Get in Touch</h2>
+    
+    <div class="grid md:grid-cols-2 gap-10 bg-white/60 backdrop-blur-lg p-10 rounded-3xl shadow-xl">
+      <!-- Contact Form -->
+      <form class="space-y-6">
+        <input type="text" placeholder="Your Name" class="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-400" />
+        <input type="email" placeholder="Email Address" class="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-400" />
+        <textarea rows="4" placeholder="Message" class="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-400"></textarea>
+        <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-xl w-full transition">Send Message</button>
+      </form>
 
-<section class="made-by">
-  <div class="profile-section">
-    <img src="sanu.png" alt="Sanu Kumar Panda" class="profile-pic" />
-    <div class="text">
-      <div class="quote">❝</div>
-      <h2>Made by <span class="name">Sanu Kumar Panda</span></h2>
-      <p>
-        Passionate about Web Development, AI, and Machine Learning.  
-        This project demonstrates my expertise in creating intelligent voice assistants with advanced UI effects.
-      </p>
+      <!-- Contact Info -->
+      <div class="flex flex-col justify-between space-y-6">
+        <!-- Social Icons -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Social Links</h3>
+          <div class="flex space-x-4 text-2xl text-indigo-600">
+            <a href="#"><i class="fab fa-facebook-square hover:text-indigo-800"></i></a>
+            <a href="#"><i class="fab fa-twitter hover:text-indigo-800"></i></a>
+            <a href="#"><i class="fab fa-instagram hover:text-indigo-800"></i></a>
+            <a href="#"><i class="fab fa-linkedin hover:text-indigo-800"></i></a>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Our Location</h3>
+          <iframe class="w-full h-48 rounded-xl border border-gray-300" src="https://maps.google.com/maps?q=Berhampur&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+
+<footer class="bg-white/70 backdrop-blur-xl border-t border-gray-200 py-12 mt-20">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
+    
+    <!-- Logo or Name -->
+    <div>
+      <h2 class="text-2xl font-bold text-indigo-600">EchoClone-AI</h2>
+      <p class="text-gray-600 mt-3">Voice cloning made easy and powerful. Empowering creators, educators, and businesses.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h4 class="font-semibold text-gray-800 mb-4">Quick Links</h4>
+      <ul class="space-y-2 text-gray-600">
+        <li><a href="#about" class="hover:underline">About</a></li>
+        <li><a href="#usecases" class="hover:underline">Use Cases</a></li>
+        <li><a href="#testimonials" class="hover:underline">Testimonials</a></li>
+        <li><a href="#contact" class="hover:underline">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Newsletter -->
+    <div>
+      <h4 class="font-semibold text-gray-800 mb-4">Newsletter</h4>
+      <p class="text-gray-600 mb-2">Get updates straight to your inbox.</p>
+      <form class="flex space-x-2">
+        <input type="email" placeholder="Email" class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:outline-none" />
+        <button class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-xl">Subscribe</button>
+      </form>
+    </div>
+
+    <!-- Social Icons -->
+    <div>
+      <h4 class="font-semibold text-gray-800 mb-4">Follow Us</h4>
+      <div class="flex space-x-4 text-2xl text-indigo-600">
+        <a href="#"><i class="fab fa-facebook-f hover:text-indigo-800"></i></a>
+        <a href="#"><i class="fab fa-twitter hover:text-indigo-800"></i></a>
+        <a href="#"><i class="fab fa-github hover:text-indigo-800"></i></a>
+        <a href="#"><i class="fab fa-youtube hover:text-indigo-800"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center text-sm text-gray-500 mt-10">&copy; 2025 EchoClone-AI. All rights reserved.</div>
+</footer>
+
 
 
 
@@ -283,3 +356,4 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </body>
 </html>
+
