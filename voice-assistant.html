@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Voice Assistant</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lottie -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.13/lottie.min.js"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <style>
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(50px);
+      z-index: -1;
+      animation: float 8s ease-in-out infinite alternate;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px) rotate(0deg); }
+      100% { transform: translateY(-20px) rotate(15deg); }
+    }
+
+    .glassy-card {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2));
+      backdrop-filter: blur(16px);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .gradient-btn {
+      background: linear-gradient(to right, #f43f5e, #f97316);
+      transition: all 0.3s ease;
+    }
+
+    .gradient-btn:hover {
+      background: linear-gradient(to right, #be123c, #c2410c);
+    }
+  </style>
+</head>
+
+<body class="h-screen w-screen flex items-center justify-center bg-[#f5f7fa] ">
+
+  <!-- ✅ Background Blobs -->
+  <div class="absolute top-0 left-0 w-72 h-72 bg-purple-500 opacity-30 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 right-0 w-72 h-72 bg-pink-500 opacity-30 rounded-full blur-3xl"></div>
+
+  <!-- ✅ Centered Card -->
+  <div class="w-full max-w-5xl mx-auto glassy-card p-10 rounded-3xl shadow-2xl z-10"
+       data-aos="zoom-in" data-aos-duration="1000">
+    <div class="flex flex-col md:flex-row items-center justify-center gap-10">
+
+      <!-- ✅ Lottie Animation -->
+      <div class="w-full md:w-1/2" data-aos="fade-right" data-aos-delay="200">
+        <div id="lottie-anim" class="w-full h-64 md:h-80"></div>
+      </div>
+
+      <!-- ✅ Assistant Content -->
+      <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-left" data-aos-delay="400">
+        <h2 class="text-3xl font-bold mb-2 text-gray-900">🎤 Voice Assistant</h2>
+        <p class="text-sm text-gray-700 mb-6">1. Upload a sample → 2. Speak or Type → 3. Get your voice reply</p>
+
+        <div class="space-y-4">
+          <div>
+            <label class="font-medium text-gray-800">Upload Voice Sample:</label><br>
+            <input type="file" id="voice-upload" accept="audio/*" class="mt-1 text-sm">
+          </div>
+
+          <div>
+            <label class="font-medium text-gray-800">Type Something:</label><br>
+            <textarea id="user-text" placeholder="Type your message..." class="w-full h-24 p-3 mt-1 bg-white/80 text-black rounded-md focus:outline-none placeholder:text-gray-900"></textarea>
+          </div>
+
+          <button id="generate" class="mt-2 gradient-btn text-white px-6 py-2 rounded-lg shadow-md">
+            <i class="fas fa-robot"></i> Generate Cloned Voice
+          </button>
+
+          <!-- ✅ Mic Button -->
+          <div class="mt-5">
+            <p class="font-medium text-gray-800">Or Speak Directly:</p>
+            <div class="relative inline-block mt-2">
+              <div id="voice-wave" class="absolute inset-0 border-2 border-red-400 rounded-full animate-ping opacity-0 pointer-events-none"></div>
+              <button id="speak-btn" class="w-14 h-14 bg-red-500 hover:bg-red-600 text-white rounded-full text-xl relative z-10 shadow-lg">
+                <i class="fas fa-microphone"></i>
+              </button>
+            </div>
+            <p id="speech-text" class="mt-2 italic text-gray-800 text-sm">Say something to your assistant...</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ✅ Scripts -->
+  <script>
+    // Initialize Lottie
+    lottie.loadAnimation({
+      container: document.getElementById("lottie-anim"),
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      path: 'https://assets1.lottiefiles.com/packages/lf20_1pxqjqps.json'
+    });
+
+    // Mic button logic
+    const micBtn = document.getElementById("speak-btn");
+    const wave = document.getElementById("voice-wave");
+    micBtn.addEventListener("click", () => {
+      wave.classList.add("opacity-100");
+      document.getElementById("speech-text").innerText = "Listening...";
+      setTimeout(() => {
+        wave.classList.remove("opacity-100");
+        document.getElementById("speech-text").innerText = "Say something to your assistant...";
+      }, 5000);
+    });
+
+    // Initialize AOS
+    document.addEventListener("DOMContentLoaded", () => {
+      AOS.init({ once: true });
+    });
+  </script>
+</body>
+</html>
