@@ -1,0 +1,229 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+   overflow-x:hidden ;
+}
+
+
+#splash {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 9999;
+}
+#particle-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.fade-out {
+  animation: fadeOut 1s ease forwards;
+}
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
+
+#main-content {
+  display: none;
+}
+
+
+.hero-intro {
+  position: relative;
+  height: 690px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background: linear-gradient(to right, #2e27a5, #ff6161, #9627a5, #2e27a5);
+   /* Adjust height based on header size */
+  background-size: 400% 400%;
+  animation: gradientMove 8s ease infinite;
+}
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.hero-intro .intro-content h1 {
+  font-size: 50px;
+  animation: fadeZoom 1.5s ease forwards;
+}
+.hero-intro .subtitle {
+  font-size: 18px;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+/* Already Existing Animations You Used */
+@keyframes fadeZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.echoclone {
+  color: yellow;
+  text-shadow: 0 0 8px rgba(255, 255, 0, 0.8);
+}
+.ai {
+  color: white;
+  text-shadow: 0 0 5px yellow, 0 0 15px rgba(255, 255, 0, 0.5);
+  animation: softGlow 2s ease-in-out infinite alternate;
+}
+@keyframes softGlow {
+  from {
+    text-shadow: 0 0 5px yellow, 0 0 15px rgba(255, 255, 0, 0.5);
+  }
+  to {
+    text-shadow: 0 0 15px yellow, 0 0 25px rgba(255, 255, 0, 0.8);
+  }
+}
+
+
+.made-by {
+  background: #ffffff;
+  width: 100%;
+  padding: 100px 20px;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  box-sizing: border-box;
+}
+.profile-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 1000px;
+  margin: auto;
+  flex-wrap: wrap; /* ✅ Fixes overflow on small screens */
+}
+.profile-pic {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid #ff6161;
+  margin-right: 20px;
+  margin-bottom: 15px; /* ✅ Adds spacing if wrapped */
+  object-fit: cover;
+}
+.text {
+  flex: 1;
+  min-width: 250px; /* ✅ Avoids text overflow */
+}
+.quote {
+  font-size: 50px;
+  color: #ff6161;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.text h2 {
+  font-size: 1.8rem;
+  margin: 5px 0;
+  font-weight: bold;
+}
+.name {
+  background: linear-gradient(90deg, #2e27a5, #ff6161, #9627a5);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.text p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.7;
+  max-width: 800px;
+}
+
+
+header {
+  position: fixed;
+  bottom: 20px; /* Sticks to bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%; /* Adjust width */
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 15px; /* Makes it thick */
+  /* Glassmorphism Background */
+  background: rgba(134, 134, 134, 0.38); /* Transparent purple */
+  backdrop-filter: blur(10px); /* Blurred background */
+  -webkit-backdrop-filter: blur(10px);
+  color: white;
+  z-index: 1000;
+  border: 2px solid rgba(255, 255, 255, 0.2); /* Light border */
+transition: transform 0.3s ease, opacity 0.3s ease;
+}
+header.hidden {
+  transform: translate(-50%, 100px); /* Move out of view */
+  opacity: 0;
+}
+header nav a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 15px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+header nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ff0000;
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in-up {
+  animation: fade-in-up 1s ease-out both;
+}
+@media (max-width: 640px) {
+  header {
+    width: 950%;
+    padding: 10px;
+    border-radius: 20px;
+    bottom: 15px;
+  }
+
+  header nav a {
+    font-size: 14px;
+    margin: 0 8px;
+    padding: 8px 10px;
+  }
+}
+
+
+
+
+
+  
+
