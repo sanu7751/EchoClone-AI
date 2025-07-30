@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EchoClone AI</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="https://unpkg.com/lottie-web@5.7.4/build/player/lottie.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      AOS.init();
+    });
+    setTimeout(() => {
+      // Hide splash and show main content
+      document.getElementById('splash').style.display = 'none';
+      document.getElementById('main-content').style.display = 'block';
+      lottie.loadAnimation({
+        container: document.getElementById('lottie-card'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'https://assets3.lottiefiles.com/packages/lf20_puciaact.json'
+      });
+      AOS.refresh();
+    }, 3000); 
+  </script>
+
+
+
+</head>
+<body>
+
+<div id="splash">
+  <canvas id="particle-canvas"></canvas>
+</div>
+
+
+
+  <div id="main-content" style="display:none;">
+    <!-- Header -->
+    <header>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#upload">Upload Voice</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+ 
+<section class="hero-intro">
+  <div class="intro-content">
+    <h1><span class="welcome">Welcome to</span> <span class="echoclone">EchoClone</span><span class="ai">AI</span></h1>
+    <p class="subtitle">A Voice Assistant with Personalized Voice Cloning</p>
+  </div>
+</section>
+
+
+
+<section class="relative bg-gradient-to-b from-indigo-50 via-white to-indigo-100 py-28 overflow-hidden">
+  <!-- Background Glow -->
+  <div class="absolute -top-32 -left-32 w-[600px] h-[600px] bg-indigo-200 opacity-20 rounded-full blur-[120px]"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-16">
+    <!-- Header -->
+    <div class="text-center mb-24" data-aos="fade-up">
+      <h2 class="text-5xl font-extrabold text-gray-900 tracking-tight leading-tight">About <span class="text-indigo-600">EchoClone</span></h2>
+      <p class="text-xl text-gray-500 mt-6 max-w-2xl mx-auto">
+        Next-gen AI voice framework for building intelligent, lifelike assistants that truly understand you.
+      </p>
+    </div>
+
+    <!-- What is EchoClone -->
+    <div class="grid md:grid-cols-2 gap-16 items-center mb-32" data-aos="fade-up">
+      <div>
+        <h3 class="text-3xl font-semibold text-gray-800 mb-4">What is EchoClone?</h3>
+        <p class="text-lg text-gray-600 leading-relaxed">
+          EchoClone is a cutting-edge voice AI system that allows developers and creators to design customizable,
+          real-time voice experiences using advanced LLMs, speech synthesis, and NLP.
+        </p>
+      </div>
+      <div>
+        <lottie-player
+          src="https://assets9.lottiefiles.com/packages/lf20_j1adxtyb.json"
+          background="transparent"
+          speed="1"
+          style="width: 100%; height: 320px;"
+          loop autoplay>
+        </lottie-player>
+      </div>
+    </div>
+
+    <!-- Mission & Vision -->
+    <div class="grid md:grid-cols-2 gap-10 mb-32" data-aos="fade-up">
+      <div class="glass-card p-10 rounded-3xl shadow-xl backdrop-blur-lg bg-white/60 border border-white/30">
+        <h4 class="text-2xl font-bold text-indigo-600 mb-3">Our Mission</h4>
+        <p class="text-gray-700 text-lg">
+          To empower creators and companies to build next-level AI voice tools that are natural, human, and accessible.
+        </p>
+      </div>
+      <div class="glass-card p-10 rounded-3xl shadow-xl backdrop-blur-lg bg-white/60 border border-white/30">
+        <h4 class="text-2xl font-bold text-indigo-600 mb-3">Our Vision</h4>
+        <p class="text-gray-700 text-lg">
+          To lead the transformation of voice AI into an everyday experience that's indistinguishable from real human interaction.
+        </p>
+      </div>
+    </div>
+
+    <!-- Timeline -->
+    <div class="text-center mb-16" data-aos="fade-up">
+      <h3 class="text-4xl font-bold text-gray-800">Our Journey</h3>
+      <p class="text-gray-500 mt-3">Milestones from idea to innovation</p>
+    </div>
+    <div class="relative border-l-4 border-indigo-300 pl-10 ml-4 space-y-16 max-w-2xl mx-auto" data-aos="fade-up">
+      <div class="relative">
+        <div class="absolute w-4 h-4 bg-indigo-600 rounded-full -left-6 top-2.5"></div>
+        <span class="text-sm text-indigo-600 font-medium">January 2024</span>
+        <h4 class="text-xl font-semibold text-gray-800 mt-1">Idea Born</h4>
+        <p class="text-gray-600">A passion for conversational AI led to the initial concept of EchoClone.</p>
+      </div>
+      <div class="relative">
+        <div class="absolute w-4 h-4 bg-indigo-600 rounded-full -left-6 top-2.5"></div>
+        <span class="text-sm text-indigo-600 font-medium">April 2024</span>
+        <h4 class="text-xl font-semibold text-gray-800 mt-1">Prototype Launched</h4>
+        <p class="text-gray-600">Our MVP showcased voice cloning with intent detection powered by LLMs.</p>
+      </div>
+      <div class="relative">
+        <div class="absolute w-4 h-4 bg-indigo-600 rounded-full -left-6 top-2.5"></div>
+        <span class="text-sm text-indigo-600 font-medium">July 2024</span>
+        <h4 class="text-xl font-semibold text-gray-800 mt-1">Beta Launch</h4>
+        <p class="text-gray-600">Developers joined our early-access program to explore real-time voice integrations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AOS + Lottie -->
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+  
+
+
+<section class="relative py-16 px-4 md:px-10 overflow-x-hidden">
+  <!-- Background Shapes -->
+  <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
+    <div class="absolute top-[-60px] left-[-60px] w-[200px] h-[200px] bg-indigo-200 opacity-30 rounded-full animate-pulse"></div>
+    <div class="absolute bottom-[-80px] right-[-80px] w-[250px] h-[250px] bg-pink-300 opacity-20 rounded-full animate-ping"></div>
+  </div>
+  <!-- Card -->
+  <div class="relative z-10 max-w-6xl mx-auto bg-white rounded-3xl shadow-xl p-8 md:p-12" data-aos="zoom-in-up">
+    <div class="flex flex-col-reverse md:flex-row items-center gap-10">
+      <!-- Left: Steps -->
+      <div class="flex-1 space-y-8">
+        <h2 class="text-4xl font-bold mb-6 text-center md:text-left">
+          How <span class="text-indigo-500">EchoClone</span> Works
+        </h2>
+        <!-- Step 1 -->
+        <div class="flex items-start gap-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="text-indigo-500 text-2xl font-bold">1.</div>
+          <div>
+            <h3 class="font-semibold text-xl">Upload Your Voice</h3>
+            <p class="text-gray-600">Record or upload a short audio sample to let EchoClone understand your voice.</p>
+          </div>
+        </div>
+        <!-- Step 2 -->
+        <div class="flex items-start gap-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-indigo-500 text-2xl font-bold">2.</div>
+          <div>
+            <h3 class="font-semibold text-xl">AI Voice Modeling</h3>
+            <p class="text-gray-600">The AI processes pitch, tone, and texture to create a synthetic voice clone.</p>
+          </div>
+        </div>
+        <!-- Step 3 -->
+        <div class="flex items-start gap-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="text-indigo-500 text-2xl font-bold">3.</div>
+          <div>
+            <h3 class="font-semibold text-xl">Type and Speak</h3>
+            <p class="text-gray-600">Type any message and hear it spoken in your cloned voice in real time.</p>
+          </div>
+        </div>
+        <!-- CTA -->
+        <div class="mt-6 text-center md:text-left" data-aos="fade-up" data-aos-delay="400">
+          <a href="voice-assistant.html">
+            <button class="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-3 px-6 rounded-xl shadow-md transition">
+              Try EchoClone Now
+            </button>
+          </a>
+        </div>
+      </div>
+      <!-- Right: Lottie Animation -->
+      <div class="flex-1 w-full" data-aos="fade-left" data-aos-delay="300">
+        <div id="lottie-card" class="w-full h-[300px] md:h-[400px]"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="relative py-20 px-6 sm:px-12 lg:px-20 bg-gradient-to-br from-blue-500 via-pink-400 to-purple-600 text-white overflow-hidden">
+  <!-- Radial texture background -->
+  <div class="absolute inset-0 opacity-20 pointer-events-none z-0"
+       style="background-image: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.15) 0%, transparent 60%), radial-gradient(circle at 80% 60%, rgba(255,255,255,0.15) 0%, transparent 60%);">
+  </div>
+  <div class="relative z-10 max-w-6xl mx-auto text-center mb-16" data-aos="fade-down">
+    <h2 class="text-4xl font-bold mb-4">Powerful Features</h2>
+    <p class="text-lg opacity-90">Experience a smarter interface built with voice, AI, and intuitive design — perfect for modern interactions.</p>
+  </div>
+  <div class="relative z-10 max-w-6xl mx-auto grid md:grid-cols-3 gap-10 text-left">
+    <!-- Feature 1 -->
+    <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 hover:bg-opacity-20 transition" data-aos="zoom-in">
+      <div class="text-4xl mb-4 text-white"><i class="fas fa-microphone-alt"></i></div>
+      <h4 class="text-xl font-semibold mb-2">Voice Recognition</h4>
+      <p class="text-sm opacity-90">Advanced voice capture for seamless and accurate user input using real-time AI processing.</p>
+    </div>
+    <!-- Feature 2 -->
+    <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 hover:bg-opacity-20 transition" data-aos="zoom-in" data-aos-delay="100">
+      <div class="text-4xl mb-4 text-white"><i class="fas fa-brain"></i></div>
+      <h4 class="text-xl font-semibold mb-2">AI-Powered Responses</h4>
+      <p class="text-sm opacity-90">Leverage intelligent language models that understand and respond naturally to human speech.</p>
+    </div>
+    <!-- Feature 3 -->
+    <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 hover:bg-opacity-20 transition" data-aos="zoom-in" data-aos-delay="200">
+      <div class="text-4xl mb-4 text-white"><i class="fas fa-chart-line"></i></div>
+      <h4 class="text-xl font-semibold mb-2">Real-Time Analytics</h4>
+      <p class="text-sm opacity-90">Visualize performance and interaction data instantly with smooth, beautiful dashboards.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="made-by">
+  <div class="profile-section">
+    <img src="sanu.png" alt="Sanu Kumar Panda" class="profile-pic" />
+    <div class="text">
+      <div class="quote">❝</div>
+      <h2>Made by <span class="name">Sanu Kumar Panda</span></h2>
+      <p>
+        Passionate about Web Development, AI, and Machine Learning.  
+        This project demonstrates my expertise in creating intelligent voice assistants with advanced UI effects.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- ✅ JavaScript -->
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</body>
+</html>
