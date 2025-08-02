@@ -59,14 +59,23 @@ document.addEventListener("DOMContentLoaded", () => {
   animateText();
 
   // ✅ Hide splash after 4 seconds
-  setTimeout(() => {
-    document.getElementById("splash").classList.add("fade-out");
+  const isMobile = window.innerWidth <= 768;
+
+  if (!isMobile) {
     setTimeout(() => {
-      document.getElementById("splash").style.display = "none";
-      document.getElementById("main-content").style.display = "block";
-      document.body.style.overflow = "auto";
-    }, 1000);
-  }, 4000);
+      document.getElementById("splash").classList.add("fade-out");
+      setTimeout(() => {
+        document.getElementById("splash").style.display = "none";
+        document.getElementById("main-content").style.display = "block";
+        document.body.style.overflow = "auto";
+      }, 1000);
+    }, 4000);
+  } else {
+    // directly show main content on mobile
+    document.getElementById("splash").style.display = "none";
+    document.getElementById("main-content").style.display = "block";
+    document.body.style.overflow = "auto";
+  }
 
   /** ✅ 2. Header Scroll Hide/Show **/
   let lastScroll = 0;
