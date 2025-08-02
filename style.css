@@ -31,6 +31,12 @@ body {
     visibility: hidden;
   }
 }
+@media (max-width: 768px) {
+  #splash {
+    display: none !important;
+  }
+}
+
 
 
 
